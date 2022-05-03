@@ -27,32 +27,22 @@ public class TesteWeb {
         driver = driverWeb.getDriver();
         driver.get("https://www.chronosacademy.com.br");
         principalPage = new PrincipalPage(driver);
-
     }
 
     @Test
     public void primeiroTest(){
         assertEquals("Porque Tempo É Conhecimento", principalPage.getTitulo());
-
     }
 
     @Test
     public void segundoTest(){
         cursoPage = new CursoPage(driver);
         principalPage.clickBotao();
-
         assertEquals("Conheça todos os nossos cursos", cursoPage.getTitulo2());
-
-        //assertEquals("Conheça todos os nossos cursos", cursoPage.getTitulo2());
-
     }
-
-
 
     @After
     public void finalizaTeste(){
-
         driver.quit();
-
     }
 }
