@@ -36,8 +36,12 @@ public class LoginSteps {
     }
 
     @Entao("a janela model deve ser fechada")
-    public void aJanelaModelDeveSerFechada() {
-
+    public void aJanelaModelDeveSerFechada() throws Exception {
+       try {
+           loginPage.invisibilityOfBtnFechar();
+       } catch (Exception e){
+           throw new Exception("A janela modal nao foi fechada");
+       }
     }
     @Quando("for realizado um clique no icone de fechar")
     public void forRealizadoUmCliqueNoIconeDeFechar() {

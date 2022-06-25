@@ -4,6 +4,7 @@ Funcionalidade: Login
   Contexto:
     Dado que a modal esteja sendo exibida
 
+    @fecharModal
   Cenario: Fechar modal ao clicar no icone fechar
     Quando for realizado um clique no icone de fechar
     Entao a janela model deve ser fechada

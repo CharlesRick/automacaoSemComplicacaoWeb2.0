@@ -12,6 +12,7 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), loginMap);
     }
     public void clickBtnLogin(){
+       Driver.visibilityOf(loginMap.btnLogin);
         loginMap.btnLogin.click();
     }
     public void clickBtnFechar(){
@@ -37,6 +38,12 @@ public class LoginPage {
     }
     public boolean isBtnSignIn(){
         return loginMap.btnSignIn.isEnabled();
+    }
+    public void visibilityOfBtnFechar(){
+        Driver.visibilityOf(loginMap.btnFechar);
+    }
+    public void invisibilityOfBtnFechar(){
+        Driver.invisibilityOf(loginMap.btnFechar);
     }
 
 
