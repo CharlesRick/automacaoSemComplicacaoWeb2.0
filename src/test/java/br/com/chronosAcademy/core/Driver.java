@@ -1,5 +1,6 @@
 package br.com.chronosAcademy.core;
 
+import br.com.chronosAcademy.enums.Browser;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,32 +18,27 @@ public class Driver {
     private static WebDriver driver;
     private static WebDriverWait wait;
 
-    public Driver(String navegador){
+    public Driver(Browser navegador){
         switch (navegador){
-            case "chrome":
+            case CHROME:
                 //abrir chrome
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
-            case "ie":
+            case IE:
                 //abrir ie
                 WebDriverManager.iedriver().setup();
                 driver = new InternetExplorerDriver();
                 break;
-            case "firefox":
+            case FIREFOX:
                 //abrir firefox
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
                 break;
-            case "edge":
+            case EDGE:
                 //abrir edge
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
-                break;
-            default:
-                //abrir chrome
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
                 break;
         }
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
