@@ -15,8 +15,11 @@ public class LoginPage {
        Driver.visibilityOf(loginMap.btnLogin);
         loginMap.btnLogin.click();
     }
-    public void clickBtnFechar(){
+    public void clickBtnFechar() throws InterruptedException {
+        Thread.sleep(5000);
+        Driver.visibilityOf(loginMap.btnFechar);
         loginMap.btnFechar.click();
+
     }
     public void clickDivFecharModal(){
         loginMap.divFecharModal.click();

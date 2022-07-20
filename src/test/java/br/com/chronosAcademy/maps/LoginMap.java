@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 public class LoginMap {
     @FindBy(css = "#menuUser") //ID em CSS = [#]
     public WebElement btnLogin;
-    @FindBy(css = ".closeBtn") // Class em CSS = [.]
+    @FindBy(css = ".closeBtn")
     public WebElement btnFechar;
     @FindBy(css = ".PopUp")
     public WebElement divFecharModal;
