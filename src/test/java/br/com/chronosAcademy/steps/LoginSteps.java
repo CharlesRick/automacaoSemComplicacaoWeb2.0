@@ -45,7 +45,7 @@ public class LoginSteps {
        }
     }
     @Quando("for realizado um clique no icone de fechar")
-    public void forRealizadoUmCliqueNoIconeDeFechar() {
+    public void forRealizadoUmCliqueNoIconeDeFechar() throws InterruptedException {
         loginPage.clickBtnFechar();
     }
 
