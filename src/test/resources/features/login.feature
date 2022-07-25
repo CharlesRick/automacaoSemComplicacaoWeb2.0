@@ -5,17 +5,17 @@ Funcionalidade: Login
     Dado que a modal esteja sendo exibida
 
     @fecharModal
-  Cenario: Fechar modal ao clicar no icone fechar
-    Quando for realizado um clique no icone de fechar
-    Entao a janela model deve ser fechada
-
-  Cenario: Fechar modal ao clicar fora da mesma
-    Quando for realizado um clique fora da modal
-    Entao a janela model deve ser fechada
-
-  Cenario: validar link create new account
-    Quando for realizado no clique no link create new account
-    Entao a pagina create new account deve ser exibida
+    Cenario: Fechar modal ao clicar fora da mesma
+      Quando for realizado um clique fora da modal
+      Entao a janela model deve ser fechada
+    @fecharModalIcone
+    Cenario: Fechar modal ao clicar no icone fechar
+      Quando for realizado um clique no icone de fechar
+      Entao a janela model deve ser fechada
+    @createNewAccount
+    Cenario: validar link create new account
+     Quando for realizado no clique no link create new account
+      Entao a pagina create new account deve ser exibida
 
   Esquema do Cenario: Realizar login com <identificacao>
     Quando os campos de login forem preenchido da seguinte forma
@@ -42,7 +42,7 @@ Funcionalidade: Login
       | identificacao    | login   | password | remember |
       | usuario invalido | ivalido | senha    | true     |
       | senha invalido   | chronos | invalido | true     |
-
+  @dadosEmBranco
   Esquema do Cenario: Realizar login com <identificacao>
     Quando os campos de login forem preenchido da seguinte forma
       | login    | <login>    |
