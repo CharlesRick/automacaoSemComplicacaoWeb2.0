@@ -18,6 +18,7 @@ Funcionalidade: Login
   Cenario: validar link create new account
     Quando for realizado no clique no link create new account
     Entao a pagina create new account deve ser exibida
+
   @loginComSucesso
   Esquema do Cenario: Realizar login com <identificacao>
     Quando os campos de login forem preenchido da seguinte forma
@@ -29,11 +30,12 @@ Funcionalidade: Login
 
     Exemplos:
       | identificacao      | login           | password | remember |
-      | todos os campos    | erro | Senha123 | true     |
-      | campos obrigatorio | charlesOliveira | Senha123 | false    |
+      | todos os campos    | CharlesOliveira | Senha123 | true     |
+      | campos obrigatorio | CharlesOliveira | Senha123 | false    |
+
   @loginInvalido
   Esquema do Cenario:  Realizar login com <identificacao>
-    Quando os campos de login forem preenchido da seguinte forma
+    Quando os campos de log in forem preenchido da seguinte forma
       | login    | <login>    |
       | password | <password> |
       | Remember | <remember> |
